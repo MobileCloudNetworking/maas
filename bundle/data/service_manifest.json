@@ -1,0 +1,9 @@
+{
+    "service_type": "http://schemas.mobile-cloud-networking.eu/occi/sm#maas",
+    "service_description": "Monitoring as a Service provided by Zabbix",
+    "service_attributes": {
+        "mcn.endpoint.maas": "immutable"
+    },
+    "service_endpoint": "http://127.0.0.1:8888/maas/",
+    "depends_on": []
+}

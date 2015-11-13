@@ -1,0 +1,14 @@
+{
+    "service_type": "zabbix",
+    "image": "maas_zabbix-v8",
+    "adapter": "ZabbixAdapter",
+    "flavor": "m1.small",
+    "key":"mcn-key",
+    "configuration": {
+    },
+    "size": {
+        "max": 1,
+        "def": 1,
+        "min": 1
+    }
+}

@@ -1,0 +1,7 @@
+# python-heatclient
+# six
+# python-novaclient
+# python-ceilometerclient
+# python-neutronclient
+# bottle
+# sqlalchemy==0.9.8
