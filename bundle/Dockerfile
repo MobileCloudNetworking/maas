@@ -1,11 +1,5 @@
-FROM mobilecloudnetworking/mcn_so_base_ops
-
+FROM mobilecloudnetworking/mcn_so_base_ops:latest
 WORKDIR /app
-
 COPY . /app
-
 EXPOSE 8080
-
-ENV PYTHONPATH=/app
-CMD ["/env/bin/python", "./wsgi/application"]
-
+CMD ["/env/bin/python", "/app/wsgi/application"]

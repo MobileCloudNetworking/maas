@@ -17,7 +17,7 @@
 
 import os
 import logging
-
+import time
 
 from util.SysUtil import SysUtil
 from util.InitSO import InitSO
@@ -47,6 +47,7 @@ class MyBackend(occi_ext.Backend):
         token = extras['token']
         tenant = extras['tenant_name']
         logging.basicConfig(format='%(asctime)s_%(process)d:%(pathname)s:%(lineno)d [%(levelname)s] %(message)s',level=logging.DEBUG)
+        print "%s: Create operation triggered" % time.ctime()
         SysUtil().init_sys()
         InitSO()
         self.so = ServiceOrchestrator(token, tenant)
@@ -94,4 +95,5 @@ if __name__ == '__main__':
     # no effect with OpSV2
     httpd = make_server('0.0.0.0', 8080, application)
     # Wait for a single request, serve it and quit.
+    print "Starting Server on port 8080 %s" % time.ctime()
     httpd.serve_forever()
